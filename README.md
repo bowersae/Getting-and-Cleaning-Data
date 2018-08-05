@@ -10,7 +10,7 @@ You will be required to submit:
 
 ## Objectives
 run_analysis.R performs the following
-1.	Downloads and unzips data from the following site and into the working directory
+1.	Downloads and unzips data from the following site into the working directory
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 2.	Merges the training and the test sets to create one data set
 3.	Extracts only the measurements on the mean and standard deviation for each measurement
