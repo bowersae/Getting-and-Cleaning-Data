@@ -68,8 +68,8 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 | Variable | Description
 -----------|-------------
-| activities | The activity performed
-| subject | Subject ID
+| Activity | The activity performed
+| Subject | Subject ID
 | tbodyacc-mean-x | Mean time for acceleration of body for X direction
 | tbodyacc-mean-y | Mean time for acceleration of body for Y direction
 | tbodyacc-mean-z | Mean time for acceleration of body for Z direction
