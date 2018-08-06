@@ -40,7 +40,7 @@ names(featuremeanstd)<-read.table("./UCI HAR Dataset/features.txt")[grep("-(mean
 combsubact<-cbind(allsubject,allactivity)
 meanstddata<-cbind(featuremeanstd,combsubact)
 
-#Appropriately labels the data set with desriptive variable names
+#Appropriately labels the data set with descriptive variable names
 names(meanstddata)<- make.names(names(meanstddata))
 names(meanstddata)<-gsub('Acc',"Acceleration",names(meanstddata))
 names(meanstddata)<-gsub('GyroJerk',"AngularAcceleration",names(meanstddata))
@@ -53,7 +53,7 @@ names(meanstddata)<-gsub('\\.std',".StandardDeviation",names(meanstddata))
 names(meanstddata)<-gsub('Freq\\.',"Frequency.",names(meanstddata))
 names(meanstddata)<-gsub('Freq$',"Frequency",names(meanstddata))
 
-#Creates an independent tidy data set with the average of each veriable for each activity and each subject
+#Creates an independent tidy data set with the average of each variable for each activity and each subject
 tidydata<-aggregate(. ~Subject + Activity, meanstddata, mean)
 tidydata<-tidydata[order(tidydata$Subject, tidydata$Activity),]
 write.table(tidydata, file="tidydata.txt", row.name = FALSE)
