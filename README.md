@@ -18,3 +18,14 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 5.	Appropriately labels the data set with descriptive variable names
 6.	An independent tidy data set with the average of each variable for each activity and each subject is saved as tidydata.txt and within the working directory
 
+## run_analysis.R 
+1.	Downloads the UCI HAR Dataset into the working directory
+2.	Unzips the file into the UCI HAR Dataset folder within the working directory
+3.	The files for subject (subjecttest, subjecttrain), activity (ytest, ytrain), and features (xtest, xtrain) are downloaded for both the test and training information
+4.	Merges test and training information together for each of the file types (allsubject, allactivity, and allfeatures)
+5.	Gives descriptive names to each column of data (“Subject”, “Activity”, features.txt)
+6.	Changes activity names to be more descriptive (activity_labels.txt)
+7.	Extracts only mean and standard deviation measurements for each measurement
+8.	Merges all data into one table (meanstddata)
+9.	Appropriately labels the data set with descriptive variable names (replacing Acc, GyroJerk, Gyro, Mag, etc.)
+10.	Creates an independent tidy data set with the average of each variable for each activity and each subject (tidydata.txt)
